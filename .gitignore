@@ -1,0 +1,15 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/config
+/packages
+/Validation.Client.XForms/Validation.Client.XForms/obj/Debug
+/Validation.Client.XForms/Validation.Client.XForms.Droid/obj/Debug
+/Validation.Client.XForms/Validation.Client.XForms.iOS/obj/iPhone/Debug
+/Validation.Client.XForms/Validation.Client.XForms.UWP/obj/x86/Debug
+/Validation.Client.XForms/Validation.Client.XForms.UWP
+/Validation.Server/bin
+/Validation.Server/obj/Debug
+/Validation.Shared/bin/Debug
+/Validation.Shared/obj/Debug
