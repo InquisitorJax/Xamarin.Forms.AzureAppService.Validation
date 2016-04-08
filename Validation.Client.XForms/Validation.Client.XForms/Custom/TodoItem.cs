@@ -1,6 +1,9 @@
-﻿namespace Validation.Client.XForms.Custom
+﻿using Prism.Mvvm;
+using Validation.Shared;
+
+namespace Validation.Client.XForms.Custom
 {
-    public class TodoItem : BindableObject, ITodoItem
+    public class TodoItem : BindableBase, ITodoItem
     {
         private bool _complete;
 

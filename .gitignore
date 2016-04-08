@@ -13,3 +13,6 @@
 /Validation.Server/obj/Debug
 /Validation.Shared/bin/Debug
 /Validation.Shared/obj/Debug
+/Validation.Client.XForms/Validation.Client.XForms/bin/Debug
+/Validation.Client.XForms/Validation.Client.XForms/obj/Release
+*.userprefs

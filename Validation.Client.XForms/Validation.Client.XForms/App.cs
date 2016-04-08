@@ -7,9 +7,9 @@ namespace Validation.Client.XForms
 {
     public class App : Application
     {
-        public App()
+        public App(Module platformModule)
         {
-            Initialize();
+            Initialize(platformModule);
 
             // The root page of your application
             MainPage = new NavigationPage(new MainPage());
@@ -30,12 +30,13 @@ namespace Validation.Client.XForms
             // Handle when your app starts
         }
 
-        private void Initialize()
+        private void Initialize(Module platformModule)
         {
             //IOC
             List<Module> modules = new List<Module>
             {
-                new IocValidationModule()
+                new IocValidationModule(),
+                platformModule
             };
 
             Wibci.InitializeIoc(modules.ToArray());

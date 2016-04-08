@@ -1,11 +1,11 @@
-﻿using System;
-
-using Android.App;
+﻿using Android.App;
 using Android.Content.PM;
+using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
-using Android.OS;
+using System;
+using Validation.Client.XForms;
 
 namespace Validation.Client.XForms.Droid
 {
@@ -17,8 +17,7 @@ namespace Validation.Client.XForms.Droid
             base.OnCreate(bundle);
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
-            LoadApplication(new App());
+            LoadApplication(new App(new IocPlatformModule()));
         }
     }
 }
-
