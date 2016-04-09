@@ -12,6 +12,7 @@ namespace Validation.Client.XForms.Custom
         public MainPageViewModel()
         {
             SaveCommand = DelegateCommand.FromAsyncHandler(SaveAsync);
+            Model = new TodoItem();
         }
 
         public TodoItem Model
