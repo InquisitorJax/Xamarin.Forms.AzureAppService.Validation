@@ -103,6 +103,10 @@
       <Project>{80780623-10f2-434b-9408-70cd759fdbe6}</Project>
       <Name>Validation.Shared</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Validation.Client.XForms\Validation.Client.XForms.csproj">
+      <Project>{f556313a-2f77-41b2-b22f-468777789897}</Project>
+      <Name>Validation.Client.XForms</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Default-568h%402x.png" />

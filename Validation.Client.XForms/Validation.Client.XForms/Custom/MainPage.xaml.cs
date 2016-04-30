@@ -1,5 +1,4 @@
-﻿using Validation.Client.XForms.Custom;
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 
 namespace Validation.Client.XForms
 {
@@ -8,11 +7,6 @@ namespace Validation.Client.XForms
         public MainPage()
         {
             InitializeComponent();
-
-            ViewModel = new MainPageViewModel();
-            BindingContext = ViewModel;
         }
-
-        private MainPageViewModel ViewModel { get; set; }
     }
 }

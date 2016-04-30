@@ -11,7 +11,7 @@ namespace Validation.Shared
         {
             //TODO: this error needs to be a resource for language translations
             RuleFor(x => x.Text).NotEmpty().WithMessage("TodoItem Text cannot be empty");
-            RuleFor(x => x.Email).NotEmpty().WithMessage("TodoItem Text cannot be empty").EmailAddress().WithMessage("Email must be in a valid format");
+            RuleFor(x => x.Email).NotEmpty().WithMessage("TodoItem Email cannot be empty").EmailAddress().WithMessage("Email must be in a valid format");
         }
     }
 }

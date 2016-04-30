@@ -1,4 +1,5 @@
 ﻿using Prism.Mvvm;
+using System.Collections.Generic;
 using Validation.Shared;
 
 namespace Validation.Client.XForms.Custom
@@ -10,6 +11,11 @@ namespace Validation.Client.XForms.Custom
         private string _email;
 
         private string _text;
+
+        public TodoItem()
+        {
+            Complete = true;
+        }
 
         public bool Complete
         {
@@ -27,6 +33,14 @@ namespace Validation.Client.XForms.Custom
         {
             get { return _text; }
             set { SetProperty(ref _text, value); }
+        }
+
+        public void RequestValidation(IList<string> propertyNames)
+        {
+            foreach (var property in propertyNames)
+            {
+                OnPropertyChanged(property);
+            }
         }
     }
 }

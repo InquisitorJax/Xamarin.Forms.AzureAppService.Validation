@@ -16,11 +16,11 @@
                                       Converter={StaticResource bob}}"
             Padding="10,0,0,0">
         <Label BindingContext="{x:Reference TextValidationResult}"
-               FontSize="{StaticResource SmallFontSize}"
+               FontSize="10"
                Text="{Binding ValidationMessage}"
                TextColor="Red" />
       </Grid>
-      <Entry Placeholder="{Binding LabelText, Source={x:Reference entry}}" Text="{Binding BindTo, Source={x:Reference entry}}">
+      <Entry Placeholder="{Binding LabelText, Source={x:Reference entry}}" Text="{Binding EntryText, Source={x:Reference entry}}">
         <Entry.Behaviors>
           <local:EntryValidationBehaviour x:Name="TextValidationResult"
                                           ValidationPropertyName="{Binding ValidationPropertyName,

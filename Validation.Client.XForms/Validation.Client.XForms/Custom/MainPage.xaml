@@ -3,15 +3,28 @@
              xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:custom="clr-namespace:Validation.Client.XForms.Custom">
+  <ContentPage.BindingContext>
+    <custom:MainPageViewModel />
+  </ContentPage.BindingContext>
   <StackLayout>
-    <Switch IsToggled="{Binding Complete}" />
+    <StackLayout Orientation="Horizontal" Padding="10,20,0,0">
+      <Label Text="Is Complete" />
+      <Switch IsToggled="{Binding Model.Complete}" />
+    </StackLayout>
 
     <custom:WibciEntry BindingContext="{Binding Model}"
-                       EntryText="{Binding Text}"
+                       EntryText="{Binding Text,
+                                               Mode=TwoWay}"
                        LabelText="Input Todo Text"
                        ValidationPropertyName="Text"
                        ValidationTypeName="ITodoItem" />
-    <custom:WibciEntry />
+
+    <custom:WibciEntry BindingContext="{Binding Model}"
+                       EntryText="{Binding Email,
+                                               Mode=TwoWay}"
+                       LabelText="Input Todo Email"
+                       ValidationPropertyName="Email"
+                       ValidationTypeName="ITodoItem" />
 
     <Button Command="{Binding SaveCommand}" Text="Save" />
   </StackLayout>
