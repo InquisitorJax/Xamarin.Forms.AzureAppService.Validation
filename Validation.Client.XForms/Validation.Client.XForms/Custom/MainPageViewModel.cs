@@ -1,7 +1,9 @@
 ﻿using Autofac;
 using FluentValidation;
+using Microsoft.WindowsAzure.MobileServices;
 using Prism.Commands;
 using Prism.Mvvm;
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Windows.Input;
@@ -27,15 +29,34 @@ namespace Validation.Client.XForms.Custom
 
         public ICommand SaveCommand { get; private set; }
 
-        private Task SaveAsync()
+        private async Task SaveAsync()
         {
             if (Validate())
             {
-                //TODO: Call Save to Server
-                Model = new TodoItem();
+                bool saved = await SaveModelToServer();
+                if (saved)
+                {
+                    Model = new TodoItem();
+                }
             }
+        }
 
-            return Task.FromResult(default(int));
+        private async Task<bool> SaveModelToServer()
+        {
+            bool saved = true;
+            var service = Wibci.IoC.Resolve<IMobileServiceClient>();
+            try
+            {
+                Model.Message = "saving....";
+                await service.GetTable<TodoItem>().InsertAsync(Model);
+                Model.Message = null;
+            }
+            catch (Exception ex)
+            {
+                saved = false;
+                Model.Message = $"Something went wrong with the service call :( {ex.Message}";
+            }
+            return saved;
         }
 
         /// <summary>

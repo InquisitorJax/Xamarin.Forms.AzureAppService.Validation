@@ -17,3 +17,4 @@
 /Validation.Client.XForms/Validation.Client.XForms/obj/Release
 *.userprefs
 /Validation.Client.XForms/Validation.Client.XForms.Droid/bin/Debug
+/Validation.Server/App_Data

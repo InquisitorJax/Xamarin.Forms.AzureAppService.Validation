@@ -25,6 +25,9 @@
                        LabelText="Input Todo Email"
                        ValidationPropertyName="Email"
                        ValidationTypeName="ITodoItem" />
+    <Label HorizontalOptions="Center"
+           Text="{Binding Model.Message}"
+           TextColor="Red" />
 
     <Button Command="{Binding SaveCommand}" Text="Save" />
   </StackLayout>

@@ -34,6 +34,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="IModel.cs" />
     <Compile Include="IocValidationModule.cs" />
     <Compile Include="ITodoItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

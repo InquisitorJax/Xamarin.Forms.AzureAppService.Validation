@@ -39,7 +39,7 @@
     <Compile Include="Custom\BooleanToInvertedBooleanConverter.cs" />
     <Compile Include="Custom\EntryValidationBehavior.cs" />
     <Compile Include="Custom\MainPageViewModel.cs" />
-    <Compile Include="Custom\MobileClientFake.cs" />
+    <Compile Include="Custom\ModelBase.cs" />
     <Compile Include="Custom\TodoItem.cs" />
     <Compile Include="Custom\WibciEntry.xaml.cs">
       <DependentUpon>WibciEntry.xaml</DependentUpon>

@@ -11,7 +11,7 @@ namespace Validation.Client.XForms.Droid
 
             builder.Register<IMobileServiceClient>(ctx =>
             {
-                string localAddress = "http://localhost/Validation.Server";
+                string localAddress = "http://10.0.0.10/Validation.Server";
                 var mobileService = new MobileServiceClient(localAddress);
                 return mobileService;
             });
